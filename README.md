@@ -4,7 +4,7 @@ Customized oh-my-zsh theme
 __install (oh-my-)zsh with:__
 ```
 sudo apt update && apt install zsh git curl -y
-sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 chsh -s $(which zsh) $(whoami)
 ```
 
