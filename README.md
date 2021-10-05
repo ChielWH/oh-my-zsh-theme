@@ -23,6 +23,7 @@ omz plugin load python
 omz plugin load docker
 omz plugin load docker-compose
 omz plugin load celery
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 omz plugin enable git
 omz plugin enable pip
@@ -30,4 +31,5 @@ omz plugin enable python
 omz plugin enable docker
 omz plugin enable docker-compose
 omz plugin enable celery
+omz plugin enable zsh-autosuggestions
 ```
