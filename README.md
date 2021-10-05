@@ -14,3 +14,20 @@ curl -H "Accept: application/vnd.github.v3.raw" https://api.github.com/repos/Chi
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="my"/' ~/.zshrc
 source ~/.zshrc
 ```
+
+__handy plugins:__
+```
+omz plugin load git
+omz plugin load pip
+omz plugin load python
+omz plugin load docker
+omz plugin load docker-compose
+omz plugin load celery
+
+omz plugin enable git
+omz plugin enable pip
+omz plugin enable python
+omz plugin enable docker
+omz plugin enable docker-compose
+omz plugin enable celery
+```
