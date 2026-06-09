@@ -7,8 +7,13 @@ function my_git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$GIT_STATUS$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
+function my_aws_prompt_info() {
+  [[ -n $AWS_PROFILE ]] || return
+  echo "%{$fg_bold[yellow]%}<aws:${AWS_PROFILE}>%{$reset_color%}"
+}
+
 PROMPT='%{$fg_bold[grey]%}[%D{%L:%M:%S}]%{$reset_color%} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
-RPS1="${return_code}"
+RPS1='$(my_aws_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[red]%}("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"
